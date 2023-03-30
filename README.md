@@ -1,3 +1,3 @@
-# angular-handon
+# angular-read-cdr-rxgxee
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-zsoyad)
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-read-cdr-rxgxee)
