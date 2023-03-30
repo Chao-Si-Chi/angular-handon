@@ -3,11 +3,12 @@ import { RouterModule, Routes } from "@angular/router";
 import { RecipesComponent } from "./recipes/recipes.component";
 import { RecipeEditComponent } from "./recipe-edit/recipe-edit.component";
 import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
+import { RecipeDetailComponent } from "./recipe-detail/recipe-detail.component";
 
 
 const routes: Routes = [
   { path: 'recipes', component: RecipesComponent, children: [
-      { path: ':idx', component: RecipesComponent }, 
+      { path: ':idx', component: RecipeDetailComponent }, 
       { path: ':idx/edit', component: RecipeEditComponent } 
     ] 
   }, 
