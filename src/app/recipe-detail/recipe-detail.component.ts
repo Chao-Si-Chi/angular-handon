@@ -19,6 +19,7 @@ export class RecipeDetailComponent implements OnInit {
     this.route.params.subscribe({
       next: (params: Params) => {
         this.index = params['idx'];
+        this.getRecipe();
       }
     });
   }
