@@ -12,7 +12,8 @@ const routes: Routes = [
       { path: ':idx/edit', component: RecipeEditComponent } 
     ] 
   }, 
-  { path: 'shopping-list', component: ShoppingListComponent}
+  { path: 'shopping-list', component: ShoppingListComponent}, 
+  { path: '', redirectTo: 'recipes', pathMatch: 'full'}, 
 ];
 
 @NgModule({
