@@ -7,7 +7,6 @@ import { ShoppingService } from '../services/shopping.service';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
-
   ingredientList = [];
   constructor(private shoppingService: ShoppingService) { }
 
