@@ -3,13 +3,16 @@ import { Recipe } from '../models/recipe.model';
 
 import { ShoppingService } from './shopping.service';
 import { Ingredient } from '../models/ingredient.model';
+import { HttpClient } from '@angular/common/http';
+import { map, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecipeService {
-
-  private _recipes: Recipe[] = [
+  //private _recipes: Recipe[];
+  private _recipes: Recipe[] 
+  = [
     new Recipe(
       'Tasty Schnitzel',
       'A super-tasty Schnitzel - just awesome!',
@@ -30,7 +33,20 @@ export class RecipeService {
     return this._recipes.slice();
   }
 
-  constructor(private shoppingService : ShoppingService) { }
+  constructor(private shoppingService : ShoppingService, 
+              private http: HttpClient) { }
+
+  getRecipes() {
+    /*return this.http.get('https://ng-firebase-crud-9d43a.firebaseio.com/Recipes.json').pipe(
+      map((response: any) =>{
+        const postArray = [];
+        for(const key in response){
+          postArray.push({...response[key], id: key});
+        }
+        return postArray;
+      }), 
+      tap((data) =>this._recipes = data));*/
+  }
 
   getRecipe(index: number) {
     return this._recipes[index];
